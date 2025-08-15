@@ -22,15 +22,9 @@ function compute(is){
         let part1 = parseFloat(temp.substring(0,i));
         let part2 = parseFloat(temp.substring(i+1));
         let k5 = temp[i];
-        if(k5=='+'){
-            resEl.innerText = (part1)+(part2);
-        }else if(k5=='-'){
-            resEl.innerText = (part1)-(part2);
-        }else if(k5=='*'){
-            resEl.innerText = (part1)*(part2);
-        }else{
-            resEl.innerText = (part1)/(part2);
-        }
+       // refactored part using ternary operators
+        k5 == "+" ? resEl.innerText = (part1) + (part2) : null; k5 == "-" ? resEl.innerText = (part1) - (part2) : null;
+        k5 == "*" ? resEl.innerText = (part1) * (part2) : null; k5 == "/" ? resEl.innerTExt = (part1) / (part2) : null; 
         resEl.innerText = '= ' + resEl.innerText
         if(!is){
             valEl.innerText = resEl.innerText + t
